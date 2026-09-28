@@ -19,7 +19,7 @@ This README covers:
 
 For help, open a ticket in the SudarshanCloud Discord server:
 
-https://discord.gg/9jvSQPcKEc
+🔗 https://discord.gg/9jvSQPcKEc
 
 When opening a ticket, include:
 
@@ -33,7 +33,7 @@ When opening a ticket, include:
 Never post a Client API key, Application API key, password, session cookie, or
 other credential in Discord, GitHub Issues, screenshots, or build logs.
 
-## Quick start
+## Quick start:
 
 ### 1. Install the APK
 
@@ -458,7 +458,7 @@ in the web app instead.
 - Remove battery restrictions for the app if the device pauses background
   work.
 - Confirm the server has a usable node address.
-- Remember that the background monitor polls every ten seconds and only
+- Remember that the background monitor polls every ten Seconds trrtttttttttttand only
   reports detected state changes.
 
 ### A GitHub build log shows an AWT or IntelliJ null-pointer message
@@ -481,8 +481,6 @@ stops, include the first real failure section in a Discord ticket.
 - Make sure the device runs Android API 24 or newer.
 - Download the APK artifact again if the file is incomplete.
 
-## Building from source
-
 ### Requirements
 
 For a local Android build, install:
@@ -496,125 +494,24 @@ The Gradle wrapper uses Gradle 9.3.1. The project compiles the app with Java
 11 source/target compatibility, but the Gradle runtime itself must be able to
 run on the Java version required by the wrapper and plugins.
 
-### Run tests
-
-From the project root:
-
-    ./gradlew test --no-daemon
-
-### Build a debug APK
-
-    ./gradlew assembleDebug --no-daemon
-
-The debug APK is normally written under:
-
-    app/build/outputs/apk/debug/
-
-### Build on GitHub Actions
-
-The workflow is located at:
-
-    .github/workflows/build-apk.yml
-
-To use it:
-
-1. Create or open a GitHub repository.
-2. Upload the project files while preserving the `.github/workflows` folder.
-3. Open the repository's **Actions** tab.
-4. Choose **Build SudarshanCloud APK**.
-5. Select **Run workflow**.
-6. Download the `SudarshanCloud-debug-APK` artifact after a successful run.
-
-More concise build notes are in `BUILD_ON_GITHUB.md`.
-
-### Release signing
-
-The release build is configured to use a keystore path and passwords supplied
-through environment variables:
-
-- `KEYSTORE_PATH`
-- `STORE_PASSWORD`
-- `KEY_PASSWORD`
-
-The configured release alias is `upload`. Never commit the keystore or any
-password to the repository. Use GitHub Actions secrets or another protected
-secret store.
-
-### Optional environment files
-
-`.env.example` documents the optional `GEMINI_API_KEY` convention used by the
-Secrets Gradle Plugin. Do not put a real API key into a committed `.env` file.
-Only configure it when the related feature or build environment requires it.
-
-## Where to find what
-
-### User-facing app code
-
-- `app/src/main/java/com/sudarshancloud/app/MainActivity.kt`
-  - App entry point
-  - Drawer, top bar, bottom navigation, and destination routing
-- `app/src/main/java/com/sudarshancloud/app/ui/components/AppDrawer.kt`
-  - Sidebar menu and the footer information/link
-- `app/src/main/java/com/sudarshancloud/app/ui/screens/`
-  - Main screen implementations
-- `app/src/main/java/com/sudarshancloud/app/ui/viewmodel/`
-  - Screen state, refresh actions, navigation, and user actions
-- `app/src/main/java/com/sudarshancloud/app/ui/theme/`
-  - Colors, typography, and Compose theme
-
-### Panel and server data
-
-- `app/src/main/java/com/sudarshancloud/app/data/api/`
-  - Retrofit API definitions, API client, and console WebSocket support
-- `app/src/main/java/com/sudarshancloud/app/data/model/`
-  - Pterodactyl response and request models
-- `app/src/main/java/com/sudarshancloud/app/data/repository/ServerRepository.kt`
-  - Panel synchronization, telemetry, power actions, console, files,
-    backups, databases, startup variables, schedules, and API errors
-- `app/src/main/java/com/sudarshancloud/app/data/db/`
-  - Room database, local configuration, cached servers, folders, and command
-    history
-
-### Background monitoring
-
-- `app/src/main/java/com/sudarshancloud/app/service/ServerStateMonitorService.kt`
-  - Foreground background-state monitor and notifications
-- `app/src/main/AndroidManifest.xml`
-  - Internet, network-state, notification, foreground-service, and launcher
-    declarations
-
-### Build and dependency configuration
-
-- `settings.gradle.kts`
-  - Gradle project settings
-- `build.gradle.kts`
-  - Root Gradle configuration
-- `app/build.gradle.kts`
-  - Android application, SDK levels, build types, and dependencies
-- `gradle/libs.versions.toml`
-  - Central dependency and plugin versions
-- `gradle/wrapper/gradle-wrapper.properties`
-  - Gradle wrapper version; currently Gradle 9.3.1
-- `.github/workflows/build-apk.yml`
-  - GitHub Actions APK build workflow
-- `BUILD_ON_GITHUB.md`
-  - Short GitHub Actions build guide
+-------------------------------------------
 
 ## Data and privacy notes
 
 - API credentials are entered by the user and should be treated as secrets.
 - The app needs network access to communicate with the panel.
-- Local cached server metadata is used to keep the interface useful when a
-  later live response omits node or host details.
+- Local cached server metadata is used to keep the interface useful when later live response omits node or host details.
 - Live panel data remains authoritative during a successful synchronization.
 - Revoke and replace API keys if a device is lost or a key is exposed.
+- Latter redistributable are not released yet, copyright will result in legal approach.
+- This is a community supported project built entirely from scratch without any app engine involved.
 
 ## Project contacts shown in the app
 
 - Website Portal: https://portal.sudarshancloud.com
 - App developer: @alexbexok.com
 - App tester: @yourlocal_pragbaler_73733
-- Helper: aayushmc0
+- Helper: @aayushmc0
 - Built using: Gradle 9.3.1
 
-Copyright © 2026 SudarshanCloud. All rights reserved.
+Copyright © 2025-2026 SudarshanCloud. All rights reserved.
